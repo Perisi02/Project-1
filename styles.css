@@ -120,7 +120,7 @@ header {
 .bannerScene3-Line2 {
     font-family: "Boldonse", system-ui;
     font-size: 100px;
-    font-weight: 500px;
+    font-weight: 500;
     top: 70px;
     left: -75px;
 }
@@ -137,6 +137,7 @@ header {
     right: 10px;
     top: 30px;
 }
+
 /* ==================== */
 /* M A I N */
 /* ==================== */
@@ -146,6 +147,8 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    overflow: hidden;
+    width: 1100px;
 
     margin-left: 150px;
     margin-right: 150px;
@@ -160,7 +163,6 @@ main {
     color: white;
     font-size: 50px;
     font-weight: 700;
-    z-index: 1;
 }
 
 /* ==================== */
@@ -168,6 +170,7 @@ main {
 /* ==================== */
 
 .sideWrapper {
+    display: flex;
     background-color: white;
     width: 400px;
     flex-shrink: 0;
@@ -189,10 +192,10 @@ main {
     margin: 10px;
     position: relative;
 
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
-.sideScene1 .sideScene1-Background1 {
+.sideScene1-Background1 {
     /* Image: Photo by Jakub Żerdzicki on Unsplash https://unsplash.com/photos/a-camera-sitting-on-top-of-a-pile-of-white-objects-GpNaHFeN5bk?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
     background-image: url('./assets/images/light-bulbs.jpg');
     position: absolute;
@@ -204,10 +207,10 @@ main {
 
 .sideScene1-Background2 {
     background-image: url('./assets/images/figure-1.png');
+    background-size: 400px auto;
     position: absolute;
     inset: 0;
     background-repeat: no-repeat;
-    background-size: 400px;
     top: 350px;
 }
 
@@ -232,15 +235,16 @@ main {
 /* S I D E B A R 
     S C E N E 2*/
 /* ==================== */
+
 .sideScene2 {
     background-color: rgb(152, 255, 255);
     display: flex;
     height: 680px;
     margin: 10px;
-    position: relative;
-}
 
-.sideWrapper .sideScene2 .sideScene2-Background1 {
+    visibility: hidden;
+}
+.sideScene2-Background1 {
     /* Image: Photo by Aleksandr Lyaptsev on Unsplash https://unsplash.com/photos/a-persons-hand-touching-a-button-on-a-wall-taNXaafOgAs?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
     background-image: url('./assets/images/switch.jpg');
     position: absolute;
@@ -250,27 +254,111 @@ main {
     background-repeat: no-repeat;
 }
 
+.sideScene2-Background2 {
+    background-image: url('./assets/images/figure-1.png');
+    position: absolute;
+    inset: 0;
+    background-size: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: -315px;
+}
+
+.side-font-2{
+    position: absolute;
+    inset: 0;
+    left: 40px;
+    font-family: "Oswald", sans-serif;
+    color: rgb(28, 106, 209);
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.sideScene2-Line1 {
+    top: -50px;
+}
+
+.sideScene2-Line2 {
+    top: 10px;
+}
+
 /* ==================== */
 /* S I D E B A R 
     S C E N E 3*/
 /* ==================== */
-.sideScene3 {
-    background-color: rgb(152, 255, 255);
-    display: flex;
-    height: 680px;
-    margin: 10px;
-    position: relative;
 
-    /* visibility: hidden; */
+.sideScene3 {
+    background-color: aquamarine;
 }
+
+.sideScene3-Background1 {
+    background-image: url('./assets/images/figure-group.png');
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-color: rgb(15, 196, 87);
+    top: 250px;
+}
+
+.sideScene3-Background2 {
+    /* Image: By New Zealand Government (Te Kāwanatanga o Aotearoa) - New Zealand Government */
+    background-image: url('./assets/images/nz-govt-logo.png');
+    position: absolute;
+    inset: 0;
+    background-size: 190px;
+    background-repeat: no-repeat;
+    top: 500px;
+    left: 200px;
+}
+
+.sideScene3-Background3 {
+    /* Image: Logo of New Zealand's Electricity Authority - https://www.ea.govt.nz */
+    background-image: url('./assets/images/te-mana-hiko-logo.png');
+    position: absolute;
+    inset: 0;
+    background-size: 170px;
+    background-repeat: no-repeat;
+    top: 515px;
+    left: 20px;
+}
+
+.sideScene3-Line1 {
+    color: cornflowerblue;
+    top: -50px;
+}
+
+.sideScene3-Line2 {
+    color: cornflowerblue;
+}
+
+.sideScene3-Line3 {
+    font-size: 40px;
+    color: black;
+    background-color: yellow;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-color: yellow;
+    border-radius: 10px;
+    top: 100px;
+}
+
+.sideScene3-Line4 {
+    color: black;
+    font-size: 14px;
+    top: 560px;
+    left: 270px;
+
+}
+
 
 /* ==================== */
 /* F O R M */
 /* ==================== */
 
-.formWrapper {
+/* .formWrapper {
     background-color: rgb(18, 27, 126);
     border-radius: 2%;
     width: 100%;
     margin: 25px;
-}
+} */
