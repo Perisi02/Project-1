@@ -1,0 +1,140 @@
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    background-color: rgb(55, 55, 60);
+}
+
+header {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bannerScene1, .bannerScene2, .bannerScene3 {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.bannerScene1 .bannerScene1-Background {
+    background-color: black;
+    /* Image: Photo by BehindTheTmuna on Unsplash https://unsplash.com/photos/a-wooden-carving-of-a-face-with-green-eyes-Q3yrtL-qJhM?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
+    background-image: url('./assets/images/maori-carving.jpg');
+    background-size: 780px auto;
+    background-repeat: no-repeat;
+    background-position-y: -300px;
+    background-position-x: right;
+    position: absolute;
+    inset: 0;
+}
+
+.bannerFont {
+    font-family: "Oswald", sans-serif;
+    margin-left: 150px;
+    position: absolute;
+    color: white;
+
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1000px;
+}
+
+.bannerScene1-Line1 {
+    font-style: oblique;
+    font-size: 50px;
+    top: 40px;
+}
+
+.bannerScene1-Line2 {
+    font-family: "Boldonse", system-ui;
+    font-size: 105px;
+    font-weight: 900;
+    top: 25px;
+}
+
+.bannerScene1-Line3 {
+    font-size: 35px;
+    font-style: oblique;
+    top: 250px;
+    left: 270px;
+}
+
+.bannerScene2 .bannerScene2-Background {
+    /* Image: Photo by David M. Chambers on Unsplash https://unsplash.com/photos/brown-boat-on-blue-body-of-water-in-front-of-green-trees-gVNSgGGhqvA?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
+    background-image: url('./assets/images/canoe.jpg');
+    background-size: 2200px;
+    background-repeat: no-repeat;
+    background-position-y: -400px;
+    background-position-x: center;
+    position: absolute;
+    inset: 0;
+}
+
+.bannerScene2-Line1 {
+    color: rgb(127, 56, 4);
+    font-size: 75px;
+    font-weight: 500;
+    top: -50px;
+    left: 450px;
+}
+
+.bannerScene2-Line2 {
+    color: rgb(127, 56, 4);
+    font-size: 35px;
+    font-style: oblique;
+    top: 95px;
+    left: 455px;
+}
+
+.bannerScene3 .bannerScene3-Background {
+    /* Image: Photo by Connor Gan on Unsplash https://unsplash.com/photos/a-group-of-people-sitting-around-a-fire-pit-DLQD4RXVjAc?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
+    background-image: url('./assets/images/marae.jpg');
+    background-size: 2100px auto;
+    background-repeat: no-repeat;
+    background-position-y: -1100px;
+    background-position-x: center;
+    position: absolute;
+    inset: 0;
+}
+
+.bannerScene3-Line1 {
+    font-size: 75px;
+    top: 0px;
+    left: -75px;
+}
+
+.bannerScene3-Line2 {
+    font-family: "Boldonse", system-ui;
+    font-size: 100px;
+    font-weight: 500px;
+    top: 70px;
+    left: -75px;
+}
+
+.bannerScene3-Line3 {
+    text-align: right;
+    font-size: 18px;
+    right: 10px;
+}
+
+.bannerScene3-Line4 {
+    text-align: right;
+    font-size: 18px;
+    right: 10px;
+    top: 30px;
+}
+
+main {
+}
