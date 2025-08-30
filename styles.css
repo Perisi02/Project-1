@@ -17,10 +17,12 @@ header {
     background-color: grey;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 25px;
     position: relative;
     overflow: hidden;
 }
+/* ==================== */
+/* B A N N E R */
+/* ==================== */
 
 .bannerScene1, .bannerScene2, .bannerScene3 {
     position: absolute;
@@ -135,6 +137,140 @@ header {
     right: 10px;
     top: 30px;
 }
+/* ==================== */
+/* M A I N */
+/* ==================== */
 
 main {
+    background-color: rgb(42, 42, 42);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    margin-left: 150px;
+    margin-right: 150px;
+
+    padding-top: 100px;
+}
+
+.sideFont {
+    position: absolute;
+    left: 40px;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    z-index: 1;
+}
+
+/* ==================== */
+/* S I D E B A R */
+/* ==================== */
+
+.sideWrapper {
+    background-color: white;
+    width: 400px;
+    flex-shrink: 0;
+    overflow: hidden;
+    height: 600px;
+    position: relative;
+    margin: 25px;
+}
+
+/* ==================== */
+/* S I D E B A R 
+    S C E N E 1*/
+/* ==================== */
+
+.sideScene1 {
+    background-color: rgb(152, 255, 255);
+    display: flex;
+    height: 680px;
+    margin: 10px;
+    position: relative;
+
+    /* visibility: hidden; */
+}
+
+.sideScene1 .sideScene1-Background1 {
+    /* Image: Photo by Jakub Żerdzicki on Unsplash https://unsplash.com/photos/a-camera-sitting-on-top-of-a-pile-of-white-objects-GpNaHFeN5bk?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
+    background-image: url('./assets/images/light-bulbs.jpg');
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sideScene1-Background2 {
+    background-image: url('./assets/images/figure-1.png');
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    top: 350px;
+}
+
+.sideScene1-Line1 {
+    top: -50px;
+    text-shadow: 0px 1px black;
+}
+.sideScene1-Line2 {
+    text-shadow: 0px 1px black;
+}
+.sideScene1-Line3 {
+    top: 50px;   
+    text-shadow: 0px 1px black;
+}
+.sideScene1-Line4 {
+    top: 100px;
+    color: yellow;
+    text-shadow: 0px 1px black;
+}
+
+/* ==================== */
+/* S I D E B A R 
+    S C E N E 2*/
+/* ==================== */
+.sideScene2 {
+    background-color: rgb(152, 255, 255);
+    display: flex;
+    height: 680px;
+    margin: 10px;
+    position: relative;
+}
+
+.sideWrapper .sideScene2 .sideScene2-Background1 {
+    /* Image: Photo by Aleksandr Lyaptsev on Unsplash https://unsplash.com/photos/a-persons-hand-touching-a-button-on-a-wall-taNXaafOgAs?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
+    background-image: url('./assets/images/switch.jpg');
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ==================== */
+/* S I D E B A R 
+    S C E N E 3*/
+/* ==================== */
+.sideScene3 {
+    background-color: rgb(152, 255, 255);
+    display: flex;
+    height: 680px;
+    margin: 10px;
+    position: relative;
+
+    /* visibility: hidden; */
+}
+
+/* ==================== */
+/* F O R M */
+/* ==================== */
+
+.formWrapper {
+    background-color: rgb(18, 27, 126);
+    border-radius: 2%;
+    width: 100%;
+    margin: 25px;
 }
