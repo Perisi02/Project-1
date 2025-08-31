@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initialScale=1.0">
     <title>Te Wai-o-Tāne</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="./scripts.js"></script>
+    <script src="./scripts.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Oswald:wght@200..700&display=swap');
     </style>
@@ -13,72 +13,232 @@
 <body>
 
     <header class="bannerWrapper">
-        <div class="bannerScene1">
-            <div class="bannerScene1-Background"></div>
-            <p class="bannerScene1-Line1 bannerFont">Experience</p>
-            <p class="bannerScene1-Line2 bannerFont">TE WAI-O-TĀNE</p>
-            <p class="bannerScene1-Line3 bannerFont">with Whakatere Pass</p>
-        </div>
-        <div class="bannerScene2">
-            <div class="bannerScene2-Background"></div>
-            <p class="bannerScene2-Line1 bannerFont">Enjoy a Guided Waka Tour</p>
-            <p class="bannerScene2-Line2 bannerFont">Paddle on the River</p>
-        </div>
-        <div class="bannerScene3">
-            <div class="bannerScene3-Background"></div>
-            <p class="bannerScene3-Line1 bannerFont">Experience</p>
-            <p class="bannerScene3-Line2 bannerFont">the Culture</p>
-            <p class="bannerScene3-Line3 bannerFont">Leati Perise</p>
-            <p class="bannerScene3-Line4 bannerFont">1415824</p>
-        </div>
+        <a href="https://jschollitt.github.io/TeWaioTane/index.html">
+            <div class="bannerScene1">
+                <div class="bannerScene1-Background"></div>
+                <p class="bannerScene1-Line1 bannerFont">Experience</p>
+                <p class="bannerScene1-Line2 bannerFont">TE WAI-O-TĀNE</p>
+                <p class="bannerScene1-Line3 bannerFont">with Whakatere Pass</p>
+            </div>
+            <div class="bannerScene2">
+                <div class="bannerScene2-Background"></div>
+                <p class="bannerScene2-Line1 bannerFont">Enjoy a Guided Waka Tour</p>
+                <p class="bannerScene2-Line2 bannerFont">Paddle on the River</p>
+            </div>
+            <div class="bannerScene3">
+                <div class="bannerScene3-Background"></div>
+                <p class="bannerScene3-Line1 bannerFont">Experience</p>
+                <p class="bannerScene3-Line2 bannerFont">the Culture</p>
+                <p class="bannerScene3-Line3 bannerFont">Leati Perise</p>
+                <p class="bannerScene3-Line4 bannerFont">1415824</p>
+            </div>
+        </a>
     </header>
 
     <main>
-        <div class="formWrapper">
-            <div class="step1">
-                ...
-            </div>
-            <div class="step2">
-                ...
-            </div>
-            <div class="step3">
-                ...
-            </div>
-            <div class="step4">
-                ...
-            </div>
-            <div class="summary">
-                ...
-            </div>
-        </div>
-        <div class="sideWrapper">
-            <div class="sideScene1">
-                <div class="sideScene1-Background1"></div>
-                <div class="sideScene1-Background2"></div>
+        <section class="formWrapper">
+            <div class="container-half card">
 
-                <p class="sideScene1-Line1 sideFont">Enlist your</p>
-                <p class="sideScene1-Line2 sideFont">off-peak</p>
-                <p class="sideScene1-Line3 sideFont">power army</p>
-                <p class="sideScene1-Line4 sideFont">and save!</p>
-            </div>
-            <div class="sideScene2">
-                <div class="sideScene2-Background1"></div>
-                <div class="sideScene2-Background2"></div>
+                <subtitle class="card-title">Input Forms</subtitle>
+                <progress value="10" max="100"></progress>
 
-                <p class="sideScene2-Line1 side-font-2">Same power,</p>
-                <p class="sideScene2-Line2 side-font-2">smarter time</p>
-            </div>
-            <div class="sideScene3">
-                <div class="sideScene3-Background1"></div>
-                <div class="sideScene3-Background2"></div>
-                <div class="sideScene3-Background3"></div>
+                <div id="form-page1" class="form-page" style="display: block">
+                    <div> <!-- page title -->
+                        <h2>Booking</h2>
+                    </div>
+                    <div> <!-- page input fields -->
+                        <label for="date-picker" class="row">
+                            Date of attendance
+                            <input
+                                type="date"
+                                id="date-picker"
+                            />
+                        </label>
+                        <label for="adults" class="row">
+                            Adults
+                            <input
+                                type="number"
+                                placeholder="0"
+                            />
+                        </label>
+                        <label for="children" class="row">
+                            Children
+                            <input
+                                type="number"
+                                placeholder="0"
 
-                <p class="sideScene3-Line1 sideFont">Enlist smart</p>
-                <p class="sideScene3-Line2 sideFont">switches and...</p>
-                <p class="sideScene3-Line3 sideFont">Go off-peak power!</p>
-                <p class="sideScene3-Line4 sideFont">Leati Perise 1415824</p>
+                            />
+                        </label>
+                    </div>
+                    <div> <!-- page nav buttons -->
+                        <button class="next" type="button" onclick="showPage(2)">
+                            Next
+                        </button>
+                    </div>
+                </div>
+
+                <div id="form-page2" class="form-page" style="display: none">
+                    <div> <!-- page title -->
+                        <h2>Contact Information</h2>
+                    </div>
+                    <div> <!-- page input fields -->
+                        <label for="contact-name" class="row">
+                            Name
+                            <input
+                                type="text"
+                                placeholder="Contact name"
+                            />
+                        </label>
+                        <label for="email-address" class="row">
+                            Email
+                            <input
+                                type="text"
+                                placeholder="Email address"
+                            />
+                        </label>
+                    </div>
+                    <div> <!-- page nav buttons -->
+                        <button class="previous" type="button" onclick="showPage(1)">
+                            Previous
+                        </button>
+                        <button class="next" type="button" onclick="showPage(3)">
+                            Next
+                        </button>
+                    </div>
+                </div>
+
+                <div id="form-page3" class="form-page" style="display: none">
+                    <div> <!-- page title -->
+                        <h2>Tickets</h2>
+                    </div>
+                    <div> <!-- page input fields -->
+                        <label for="ticket-type" class="row">
+                            Ticket type
+                            <select name="tickets" id="ticket-type">
+                                <option value="">--Select ticket type--</option>
+                                <option value="standard">Standard</option>
+                                <option value="whakatere">Whakatere Pass</option>
+                            </select>
+                        </label>
+                        <div class="row"> <!-- radio button input -->
+                            <p>(Optional) Storage locker</p>
+                            <label for="storage-yes">
+                                <input
+                                    type="radio"
+                                    id="storage-yes"
+                                    name="extra-storage"
+                                    value="Yes, please add storage locker"
+                                /><span> Yes, please add storage locker,</span>
+                            </label>
+                            <label for="storage-no">
+                                <input
+                                    type="radio"
+                                    id="storage-no"
+                                    name="extra-storage"
+                                    value="No, thank you"
+                                /><span>No, thank you</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div> <!-- page nav buttons -->
+                        <button class="previous" type="button" onclick="showPage(2)">
+                            Previous
+                        </button>
+                        <button class="next" type="button" onclick="showPage(4)">
+                            Next
+                        </button>
+                    </div>
+                </div>
+
+                <div id="form-page4" class="form-page" style="display: none">
+                    <div> <!-- page title -->
+                        <h2>Confirmation</h2>
+                    </div>
+                    <div> <!-- page input fields -->
+                        <label for="terms-conditions" class="row">
+                            <input
+                                type="checkbox"
+                                id="terms-conditions"
+                            />
+                            I have read and understood the terms and conditions
+                        </label>
+                    </div>
+                    <div> <!-- page nav buttons -->
+                        <button class="previous" type="button" onclick="showPage(3)">
+                            Previous
+                        </button>
+                        <button class="next" type="button" onclick="showPage(5)">
+                            Next
+                        </button>
+                    </div>
+                </div>
+
+                <div id="form-page5" class="form-page" style="display: none">
+                    <div> <!-- page title -->
+                    <h2>Summary</h2>
+                    </div>
+                    <div> <!-- page input fields -->
+                        <div class="row">
+                            Date: <span id="summary-date"></span>
+                        </div>
+                        <div class="row">
+                            Adults: <span id="summary-adults"></span>
+                        </div>
+                        <div class="row">
+                            Children: <span id="summary-children"></span>
+                        </div>
+                        <div class="row">
+                            Contact name: <span id="summary-contact-name"></span>
+                        </div>
+                        <div class="row">
+                            Email: <span id="summary-email"></span>
+                        </div>
+                        <div class="row">
+                            Ticket type: <span id="summary-ticket"></span>
+                        </div>
+                        <div class="row">
+                            Storage locker: <span id="summary-storage-locker"></span>
+                        </div>
+                    </div>
+                    <div> <!-- page nav buttons -->
+                        <button class="next" type="button" onclick="showPage(1)">
+                            Close
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <a href="https://www.ea.govt.nz/">
+            <div class="sideWrapper">
+                <div class="sideScene1">
+                    <div class="sideScene1-Background1"></div>
+                    <div class="sideScene1-Background2"></div>
+
+                    <p class="sideScene1-Line1 sideFont">Enlist your</p>
+                    <p class="sideScene1-Line2 sideFont">off-peak</p>
+                    <p class="sideScene1-Line3 sideFont">power army</p>
+                    <p class="sideScene1-Line4 sideFont">and save!</p>
+                </div>
+                <div class="sideScene2">
+                    <div class="sideScene2-Background1"></div>
+                    <div class="sideScene2-Background2"></div>
+
+                    <p class="sideScene2-Line1 side-font-2">Same power,</p>
+                    <p class="sideScene2-Line2 side-font-2">smarter time</p>
+                </div>
+                <div class="sideScene3">
+                    <div class="sideScene3-Background1"></div>
+                    <div class="sideScene3-Background2"></div>
+                    <div class="sideScene3-Background3"></div>
+
+                    <p class="sideScene3-Line1 sideFont">Enlist smart</p>
+                    <p class="sideScene3-Line2 sideFont">switches and...</p>
+                    <p class="sideScene3-Line3 sideFont">Go off-peak power!</p>
+                    <p class="sideScene3-Line4 sideFont">Leati Perise 1415824</p>
+                </div>
+            </div>
+        </a>
     </main>
 
 </body>
