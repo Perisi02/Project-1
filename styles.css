@@ -65,6 +65,10 @@ header {
     background-position-x: right;
     position: absolute;
     inset: 0;
+
+    transform: translateX(-50px);
+    transition-duration: 4s;
+    transition-delay: 0.5s;
 }
 
 .bannerFont {
@@ -207,9 +211,9 @@ main {
 
 /* ======================================================================================== */
 
-.sideSceneWrapper {
+.sideWrapper {
     z-index: 0;
-    position: absolute;
+    position: relative;
     display: flex;
     background-color: rgba(66,108,169,255);
     flex-shrink: 0;
@@ -374,6 +378,7 @@ main {
 
 .sideScene3-Line2 {
     color: white;
+    top: 0px;
 }
 
 .sideScene3-Line3 {
@@ -401,6 +406,7 @@ main {
     font-size: 100px;
     top: 275px;
     left: 125px;
+
 }
 
 #adScene3{
