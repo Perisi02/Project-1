@@ -8,31 +8,51 @@ body {
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
-    background-color: rgb(55, 55, 60);
+    background-color: rgb(180, 180, 180);
 }
 
 header {
     width: 100%;
     height: 400px;
-    background-color: grey;
+    background-color: black;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     overflow: hidden;
 }
-/* ==================== */
-/* B A N N E R */
-/* ==================== */
+/* ======================================================================================== */
 
-.bannerScene1, .bannerScene2, .bannerScene3 {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
+@keyframes fade-in {
+    from {opacity: initial}
+    to {opacity: 100%}
+}
+@keyframes fade-out {
+    from {opacity: initial;}
+    to {opacity: 0;}
+}
+
+.bannerScene1 {
+    opacity: 0%;
+
+    animation: fade-in;
+    animation-duration: 0.5s;
+}
+
+.bannerScene2 {
+    visibility: hidden;
+}
+
+.bannerScene3 {    
+    visibility: hidden;
 }
 
 .bannerScene1 .bannerScene1-Background {
     background-color: black;
-    /* Image: Photo by BehindTheTmuna on Unsplash https://unsplash.com/photos/a-wooden-carving-of-a-face-with-green-eyes-Q3yrtL-qJhM?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
+
+    /* Image: Photo by BehindTheTmuna on Unsplash https://unsplash.com/photos/a-wooden-c
+    arving-of-a-face-with-green-eyes-Q3yrtL-qJhM?utm_content=creditShareLink&utm_medium=r
+    eferral&utm_source=unsplash */
+
     background-image: url('./assets/images/maori-carving.jpg');
     background-size: 780px auto;
     background-repeat: no-repeat;
@@ -71,10 +91,18 @@ header {
     font-style: oblique;
     top: 250px;
     left: 270px;
+
+    
 }
 
+/* ======================================================================================== */
+
 .bannerScene2 .bannerScene2-Background {
-    /* Image: Photo by David M. Chambers on Unsplash https://unsplash.com/photos/brown-boat-on-blue-body-of-water-in-front-of-green-trees-gVNSgGGhqvA?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
+
+    /* Image: Photo by David M. Chambers on Unsplash https://unsplash.com/photos/brown-boa
+    t-on-blue-body-of-water-in-front-of-green-trees-gVNSgGGhqvA?utm_content=creditShareLink
+    &utm_medium=referral&utm_source=unsplash */
+
     background-image: url('./assets/images/canoe.jpg');
     background-size: 2200px;
     background-repeat: no-repeat;
@@ -100,8 +128,14 @@ header {
     left: 455px;
 }
 
+/* ======================================================================================== */
+
 .bannerScene3 .bannerScene3-Background {
-    /* Image: Photo by Connor Gan on Unsplash https://unsplash.com/photos/a-group-of-people-sitting-around-a-fire-pit-DLQD4RXVjAc?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
+
+    /* Image: Photo by Connor Gan on Unsplash https://unsplash.com/photos/a-group-of-people-
+    sitting-around-a-fire-pit-DLQD4RXVjAc?utm_content=creditShareLink&utm_medium=referral&ut
+    m_source=unsplash */
+
     background-image: url('./assets/images/marae.jpg');
     background-size: 2100px auto;
     background-repeat: no-repeat;
@@ -129,6 +163,8 @@ header {
     text-align: right;
     font-size: 18px;
     right: 10px;
+
+    visibility: hidden;
 }
 
 .bannerScene3-Line4 {
@@ -136,24 +172,23 @@ header {
     font-size: 18px;
     right: 10px;
     top: 30px;
+
+    visibility: hidden;
 }
 
-/* ==================== */
-/* M A I N */
-/* ==================== */
+/* ======================================================================================== */
 
 main {
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(226, 226, 226);
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    gap: 25px;
     overflow: hidden;
-    width: 1100px;
+    width: fit-content;
 
     margin-left: 150px;
     margin-right: 150px;
-
-    padding-top: 100px;
 }
 
 .sideFont {
@@ -165,25 +200,20 @@ main {
     font-weight: 700;
 }
 
-/* ==================== */
-/* S I D E B A R */
-/* ==================== */
+/* ======================================================================================== */
 
 .sideWrapper {
+    position: absolute;
     display: flex;
     background-color: white;
-    width: 400px;
     flex-shrink: 0;
     overflow: hidden;
+    width: 400px;
     height: 600px;
-    position: relative;
     margin: 25px;
 }
 
-/* ==================== */
-/* S I D E B A R 
-    S C E N E 1*/
-/* ==================== */
+/* ======================================================================================== */
 
 .sideScene1 {
     background-color: rgb(152, 255, 255);
@@ -196,7 +226,11 @@ main {
 }
 
 .sideScene1-Background1 {
-    /* Image: Photo by Jakub Żerdzicki on Unsplash https://unsplash.com/photos/a-camera-sitting-on-top-of-a-pile-of-white-objects-GpNaHFeN5bk?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
+
+    /* Image: Photo by Jakub Żerdzicki on Unsplash https://unsplash.com/photos/a-camera-s
+    itting-on-top-of-a-pile-of-white-objects-GpNaHFeN5bk?utm_content=creditShareLink&utm_m
+    edium=referral&utm_source=unsplash */
+
     background-image: url('./assets/images/light-bulbs.jpg');
     position: absolute;
     inset: 0;
@@ -231,10 +265,7 @@ main {
     text-shadow: 0px 1px black;
 }
 
-/* ==================== */
-/* S I D E B A R 
-    S C E N E 2*/
-/* ==================== */
+/* ======================================================================================== */
 
 .sideScene2 {
     background-color: rgb(152, 255, 255);
@@ -245,7 +276,11 @@ main {
     visibility: hidden;
 }
 .sideScene2-Background1 {
-    /* Image: Photo by Aleksandr Lyaptsev on Unsplash https://unsplash.com/photos/a-persons-hand-touching-a-button-on-a-wall-taNXaafOgAs?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash */
+
+    /* Image: Photo by Aleksandr Lyaptsev on Unsplash https://unsplash.com/photos/a-person
+    s-hand-touching-a-button-on-a-wall-taNXaafOgAs?utm_content=creditShareLink&utm_medium=r
+    eferral&utm_source=unsplash */
+
     background-image: url('./assets/images/switch.jpg');
     position: absolute;
     inset: 0;
@@ -282,10 +317,7 @@ main {
     top: 10px;
 }
 
-/* ==================== */
-/* S I D E B A R 
-    S C E N E 3*/
-/* ==================== */
+/* ======================================================================================== */
 
 .sideScene3 {
     background-color: aquamarine;
@@ -341,6 +373,8 @@ main {
     border-color: yellow;
     border-radius: 10px;
     top: 100px;
+
+    visibility: hidden;
 }
 
 .sideScene3-Line4 {
@@ -349,16 +383,104 @@ main {
     top: 560px;
     left: 270px;
 
+    visibility: hidden;
 }
 
+/* ======================================================================================== */
 
-/* ==================== */
-/* F O R M */
-/* ==================== */
-
-/* .formWrapper {
-    background-color: rgb(18, 27, 126);
-    border-radius: 2%;
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1%;
     width: 100%;
     margin: 25px;
-} */
+    align-content: center;
+}
+
+/*  The following lines of code weren't from me.
+    I copied and pasted them from:
+    ISCG6420-S2-2025
+    Week 5: HTML5, DOM, JavaScript
+    Exercise: Multi-Page Forms
+    url: https://moodle.unitec.ac.nz/mod/folder/view.php?id=1088851 */
+
+.container-half {
+    padding: 8px;
+    width: 48%;
+    margin: 1%;
+    float: left;
+    box-sizing: inherit;
+    text-align: center;
+    min-height: 300px;
+    min-width: 500px;
+}
+
+.card {
+    border: 1px solid #adadad8a;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
+    position: relative;
+}
+
+.card-title {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: #fff;
+}
+
+progress {
+    margin-top: 20px;
+    width: 78%;
+    background-color:darkgray;
+    height: 20px;
+    border-radius: 0.5em;
+}
+
+.card-title {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: #fff;
+}
+
+.form-page {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: 80%;
+}
+
+.form-page .row {
+    width: 100%;
+    float: left;
+    padding: 8px 8px 2px 0px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.form-page label input[type="text"] {
+    width: 70%;
+    float: right;
+    line-height: 150%;
+}
+
+.form-page label input[type="radio"] {
+    vertical-align: middle;
+    margin-top: -1px;
+}
+
+.form-page button {
+    padding: 4px 8px;
+    margin: 8px;
+    width: 25%;
+}
+
+.form-page button.next {
+    float: right;
+}
+
+.form-page button.previous {
+    float: left;
+}
