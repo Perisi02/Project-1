@@ -23,30 +23,35 @@ header {
 /* ======================================================================================== */
 
 @keyframes fade-in {
-    from {opacity: initial}
-    to {opacity: 100%}
+    from {opacity: 0}
+    to {opacity: 100}
 }
 @keyframes fade-out {
-    from {opacity: initial;}
+    from {opacity: 100;}
     to {opacity: 0;}
 }
 
 .bannerScene1 {
-    opacity: 0%;
-
-    animation: fade-in;
-    animation-duration: 0.5s;
+    animation:
+    fade-in     0.5s ease 0s forwards,
+    fade-out    0.5s ease 4s;
 }
 
 .bannerScene2 {
-    visibility: hidden;
+    opacity: 0;
+
+    animation: fade-in 0.5s ease forwards, fade-out 0.5s ease forwards;
+    animation-delay: 4s, 8.5s;
 }
 
 .bannerScene3 {    
-    visibility: hidden;
+    opacity: 0;
+
+    animation: fade-in 0.5s ease forwards, fade-out 0.5s ease forwards;
+    animation-delay: 8.5s, 13s;
 }
 
-.bannerScene1 .bannerScene1-Background {
+.bannerScene1-Background {
     background-color: black;
 
     /* Image: Photo by BehindTheTmuna on Unsplash https://unsplash.com/photos/a-wooden-c
@@ -65,9 +70,8 @@ header {
 .bannerFont {
     font-family: "Oswald", sans-serif;
     margin-left: 150px;
-    position: absolute;
     color: white;
-
+    position: absolute;
     overflow: hidden;
     white-space: nowrap;
     width: 1000px;
@@ -76,7 +80,8 @@ header {
 .bannerScene1-Line1 {
     font-style: oblique;
     font-size: 50px;
-    top: 40px;
+    top: 35px;
+    left: 10px;
 }
 
 .bannerScene1-Line2 {
@@ -84,6 +89,7 @@ header {
     font-size: 105px;
     font-weight: 900;
     top: 25px;
+    left: 10px;
 }
 
 .bannerScene1-Line3 {
@@ -91,8 +97,6 @@ header {
     font-style: oblique;
     top: 250px;
     left: 270px;
-
-    
 }
 
 /* ======================================================================================== */
@@ -104,28 +108,29 @@ header {
     &utm_medium=referral&utm_source=unsplash */
 
     background-image: url('./assets/images/canoe.jpg');
+    position: absolute;
+    inset: 0;
     background-size: 2200px;
     background-repeat: no-repeat;
     background-position-y: -400px;
     background-position-x: center;
-    position: absolute;
-    inset: 0;
 }
 
 .bannerScene2-Line1 {
     color: rgb(127, 56, 4);
     font-size: 75px;
     font-weight: 500;
+    left: 300px;
     top: -50px;
-    left: 450px;
 }
+
 
 .bannerScene2-Line2 {
     color: rgb(127, 56, 4);
     font-size: 35px;
     font-style: oblique;
     top: 95px;
-    left: 455px;
+    left: 500px;
 }
 
 /* ======================================================================================== */
@@ -179,13 +184,13 @@ header {
 /* ======================================================================================== */
 
 main {
-    background-color: rgb(226, 226, 226);
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: 25px;
     overflow: hidden;
     width: fit-content;
+    height: 625px;
 
     margin-left: 150px;
     margin-right: 150px;
@@ -203,9 +208,10 @@ main {
 /* ======================================================================================== */
 
 .sideWrapper {
+    z-index: 0;
     position: absolute;
     display: flex;
-    background-color: white;
+    background-color: rgba(66,108,169,255);
     flex-shrink: 0;
     overflow: hidden;
     width: 400px;
@@ -216,13 +222,26 @@ main {
 /* ======================================================================================== */
 
 .sideScene1 {
-    background-color: rgb(152, 255, 255);
+    z-index: 3;
+    animation: fade-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+.sideScene2 {
+    z-index: 2;
+    animation: fade-out;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+.sideScene3 {
+    z-index: 1;
+
+}
+
+.sideScene1 {
     display: flex;
     height: 680px;
     margin: 10px;
-    position: relative;
-
-    visibility: hidden;
 }
 
 .sideScene1-Background1 {
@@ -268,13 +287,11 @@ main {
 /* ======================================================================================== */
 
 .sideScene2 {
-    background-color: rgb(152, 255, 255);
     display: flex;
     height: 680px;
     margin: 10px;
-
-    visibility: hidden;
 }
+
 .sideScene2-Background1 {
 
     /* Image: Photo by Aleksandr Lyaptsev on Unsplash https://unsplash.com/photos/a-person
@@ -319,22 +336,18 @@ main {
 
 /* ======================================================================================== */
 
-.sideScene3 {
-    background-color: aquamarine;
-}
-
 .sideScene3-Background1 {
     background-image: url('./assets/images/figure-group.png');
     position: absolute;
     inset: 0;
     background-repeat: no-repeat;
     background-size: 400px;
-    background-color: rgb(15, 196, 87);
     top: 250px;
 }
 
 .sideScene3-Background2 {
-    /* Image: By New Zealand Government (Te Kāwanatanga o Aotearoa) - New Zealand Government */
+    /* Image: By New Zealand Government (Te Kāwanatanga o Aotearoa) - New Zealand
+    Government */
     background-image: url('./assets/images/nz-govt-logo.png');
     position: absolute;
     inset: 0;
@@ -356,12 +369,12 @@ main {
 }
 
 .sideScene3-Line1 {
-    color: cornflowerblue;
+    color: white;
     top: -50px;
 }
 
 .sideScene3-Line2 {
-    color: cornflowerblue;
+    color: white;
 }
 
 .sideScene3-Line3 {
@@ -373,17 +386,14 @@ main {
     border-color: yellow;
     border-radius: 10px;
     top: 100px;
-
-    visibility: hidden;
 }
 
 .sideScene3-Line4 {
+    opacity: 0;
     color: black;
     font-size: 14px;
     top: 560px;
     left: 270px;
-
-    visibility: hidden;
 }
 
 /* ======================================================================================== */
