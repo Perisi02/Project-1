@@ -48,10 +48,11 @@ function showPage(pageNumber) {
             formPage5.style.display = 'block';
             progressBar.value=100;
             break;
-        
     }
+}
 
-const bannerScene1 = document.getElementsByClassName(bannerScene1);
-
-bannerScene1.classList.add();
+function adReplay() {
+    let ad = document.getElementById("adWrapper");
+    let copy = ad.cloneNode(true);
+    ad.replaceWith(copy);
 }

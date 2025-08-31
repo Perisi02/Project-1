@@ -207,7 +207,7 @@ main {
 
 /* ======================================================================================== */
 
-.sideWrapper {
+.sideSceneWrapper {
     z-index: 0;
     position: absolute;
     display: flex;
@@ -235,7 +235,6 @@ main {
 }
 .sideScene3 {
     z-index: 1;
-
 }
 
 .sideScene1 {
@@ -378,23 +377,51 @@ main {
 }
 
 .sideScene3-Line3 {
+    background-color: yellow;
     font-size: 40px;
     color: black;
-    background-color: yellow;
     padding-left: 5px;
     padding-right: 5px;
-    border-color: yellow;
     border-radius: 10px;
     top: 100px;
+
+    animation: pop-up;
+    animation-duration: 9s;
 }
 
 .sideScene3-Line4 {
-    opacity: 0;
     color: black;
     font-size: 14px;
     top: 560px;
     left: 270px;
 }
+
+#adReplay {
+    position: absolute;
+    font-size: 100px;
+    top: 275px;
+    left: 125px;
+}
+
+#adScene3{
+    visibility: visible;
+    animation: pop-up;
+    animation-duration: 11s;
+}
+
+@keyframes pop-up {
+    0% {
+        visibility: hidden;
+    }
+    99% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+
 
 /* ======================================================================================== */
 
@@ -403,27 +430,25 @@ main {
     flex-direction: column;
     background-color: white;
     border-radius: 1%;
-    width: 100%;
+    min-width: 800px;
     margin: 25px;
+    margin-bottom: 0%;
     align-content: center;
 }
 
-/*  The following lines of code weren't from me.
-    I copied and pasted them from:
-    ISCG6420-S2-2025
-    Week 5: HTML5, DOM, JavaScript
+/*  Week 5: HTML5, DOM, JavaScript
     Exercise: Multi-Page Forms
     url: https://moodle.unitec.ac.nz/mod/folder/view.php?id=1088851 */
 
 .container-half {
     padding: 8px;
     width: 48%;
-    margin: 1%;
-    float: left;
+    margin-top: 30px;
     box-sizing: inherit;
+    align-self: center;
     text-align: center;
     min-height: 300px;
-    min-width: 500px;
+    min-width: 600px;
 }
 
 .card {
@@ -442,7 +467,7 @@ main {
 progress {
     margin-top: 20px;
     width: 78%;
-    background-color:darkgray;
+    background-color:aliceblue;
     height: 20px;
     border-radius: 0.5em;
 }
