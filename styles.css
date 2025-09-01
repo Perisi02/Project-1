@@ -31,53 +31,48 @@ header {
     to {opacity: 0;}
 }
 
-.bannerScene1 {
+.bannerScene1, .bannerScene2, .bannerScene3 {
+    opacity: 0;
     animation:
-    fade-in     0.5s ease 0s forwards,
-    fade-out    0.5s ease 4s;
+        fade-in 0.5s ease forwards,
+        fade-out 0.5s ease forwards;
+}
+
+.bannerScene1 {
+    animation-delay: 0s, 4s;
 }
 
 .bannerScene2 {
-    opacity: 0;
-
-    animation: fade-in 0.5s ease forwards, fade-out 0.5s ease forwards;
     animation-delay: 4s, 8.5s;
 }
 
-.bannerScene3 {    
-    opacity: 0;
-
-    animation: fade-in 0.5s ease forwards, fade-out 0.5s ease forwards;
+.bannerScene3 {
     animation-delay: 8.5s, 13s;
 }
 
-.bannerScene1-Background {
-    background-color: black;
+.bannerWrapper .set-bg, .sideWrapper .set-bg{
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+}
 
+.bannerScene1-Background {
     /* Image: Photo by BehindTheTmuna on Unsplash https://unsplash.com/photos/a-wooden-c
     arving-of-a-face-with-green-eyes-Q3yrtL-qJhM?utm_content=creditShareLink&utm_medium=r
     eferral&utm_source=unsplash */
-
     background-image: url('./assets/images/maori-carving.jpg');
     background-size: 780px auto;
-    background-repeat: no-repeat;
     background-position-y: -300px;
     background-position-x: right;
-    position: absolute;
-    inset: 0;
-
-    transform: translateX(-50px);
-    transition-duration: 4s;
-    transition-delay: 0.5s;
 }
 
 .bannerFont {
     font-family: "Oswald", sans-serif;
-    margin-left: 150px;
     color: white;
     position: absolute;
     overflow: hidden;
     white-space: nowrap;
+    margin-left: 150px;
     width: 1000px;
 }
 
@@ -97,27 +92,22 @@ header {
 }
 
 .bannerScene1-Line3 {
-    font-size: 35px;
     font-style: oblique;
     top: 250px;
+    font-size: 35px;
     left: 270px;
 }
 
 /* ======================================================================================== */
 
-.bannerScene2 .bannerScene2-Background {
-
+.bannerScene2-Background {
     /* Image: Photo by David M. Chambers on Unsplash https://unsplash.com/photos/brown-boa
     t-on-blue-body-of-water-in-front-of-green-trees-gVNSgGGhqvA?utm_content=creditShareLink
     &utm_medium=referral&utm_source=unsplash */
-
     background-image: url('./assets/images/canoe.jpg');
-    position: absolute;
-    inset: 0;
-    background-size: 2200px;
-    background-repeat: no-repeat;
-    background-position-y: -400px;
     background-position-x: center;
+    background-size: 2200px;
+    background-position-y: -400px;
 }
 
 .bannerScene2-Line1 {
@@ -144,14 +134,10 @@ header {
     /* Image: Photo by Connor Gan on Unsplash https://unsplash.com/photos/a-group-of-people-
     sitting-around-a-fire-pit-DLQD4RXVjAc?utm_content=creditShareLink&utm_medium=referral&ut
     m_source=unsplash */
-
     background-image: url('./assets/images/marae.jpg');
-    background-size: 2100px auto;
-    background-repeat: no-repeat;
-    background-position-y: -1100px;
     background-position-x: center;
-    position: absolute;
-    inset: 0;
+    background-size: 2100px auto;
+    background-position-y: -1100px;
 }
 
 .bannerScene3-Line1 {
@@ -244,15 +230,6 @@ main {
 .sideScene3 {
     z-index: 1;
     animation-delay: 11s;
-}
-
-
-.sideScene1-Background1, .sideScene1-Background2,
-.sideScene2-Background1, .sideScene2-Background2,
-.sideScene3-Background1, .sideScene3-Background2, .sideScene3-Background3 {
-    position: absolute;
-    inset: 0;
-    background-repeat: no-repeat;
 }
 
 .sideScene1-Background1 {
@@ -370,7 +347,7 @@ main {
     animation-fill-mode: forwards;
 }
 
-#studentName {
+#studentNameAd {
     visibility: hidden;
     position: relative;
     color:white;
