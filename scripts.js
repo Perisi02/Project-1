@@ -1,3 +1,9 @@
+function adReplay() {
+    let ad = document.querySelector(".sideWrapper");
+    let copy = ad.cloneNode(true);
+    ad.replaceWith(copy);
+}
+
 const formPage1 = document.getElementById("form-page1");
 const formPage2 = document.getElementById("form-page2");
 const formPage3 = document.getElementById("form-page3");
@@ -49,10 +55,4 @@ function showPage(pageNumber) {
             progressBar.value=100;
             break;
     }
-}
-
-function adReplay() {
-    let ad = document.querySelector(".sideWrapper");
-    let copy = ad.cloneNode(true);
-    ad.replaceWith(copy);
 }

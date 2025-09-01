@@ -4,6 +4,40 @@ html{
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
+@keyframes white-to-gold {
+    from {color: white;}
+    to {color: rgb(243, 187, 44);}
+}
+@keyframes slide-right {
+    from {left: 0px;}
+    to {left: 70px;}
+}
+@keyframes slide-left {
+    from {right: 0px;}
+    to {right: 100px;}
+}
+@keyframes slide-down {
+    from {top: 0px;}
+    to {top: 100px;}
+}
+@keyframes scale-up {
+    from {scale: 1;}
+    to {scale: 1.1;}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 100}
+}
+@keyframes fade-out {
+    from {opacity: 100;}
+    to {opacity: 0;}
+}
+@keyframes pop-up {
+    from {visibility: hidden;}
+    to{visibility: visible;}
+}
+
 body {
     margin-left: 0px;
     margin-right: 0px;
@@ -43,18 +77,25 @@ header {
         fade-in 3s ease 10s forwards;
 }
 
-.bannerScene1, .bannerScene2, .bannerScene3 {
+.bannerScene1 {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 3;
+
+    animation:
+        fade-in 0.5s ease 0s forwards,
+        fade-out 0.5s ease 4.5s forwards,
+        fade-in 0.5s ease 13.5s forwards;
+}
+
+.bannerScene2, .bannerScene3 {
     position: absolute;
     inset: 0;
     opacity: 0;
     animation:
         fade-in 0.5s ease forwards,
         fade-out 0.5s ease forwards;
-    }
-    
-    .bannerScene1 {
-    z-index: 3;
-    animation-delay: 0s, 4.5s;
 }
 .bannerScene2 {
     z-index: 2;
@@ -212,43 +253,6 @@ header {
         fade-in 2s ease 9.5s forwards,
         white-to-gold 3s ease 9.5s forwards,
         slide-right 10s ease-out 9s forwards;
-}
-
-@keyframes white-to-gold {
-    from {color: white;}
-    to {color: rgb(243, 187, 44);}
-}
-@keyframes slide-right {
-    from {left: 0px;}
-    to {left: 70px;}
-}
-@keyframes slide-left {
-    from {right: 0px;}
-    to {right: 100px;}
-}
-@keyframes slide-up {
-    from {top: 0px;}
-    to {top: -100px;}
-}
-@keyframes slide-down {
-    from {top: 0px;}
-    to {top: 100px;}
-}
-@keyframes scale-up {
-    from {scale: 1;}
-    to {scale: 1.1;}
-}
-@keyframes scale-down {
-    from {scale: 1;}
-    to {scale: 1.1;}
-}
-@keyframes fade-in {
-    from {opacity: 0}
-    to {opacity: 100}
-}
-@keyframes fade-out {
-    from {opacity: 100;}
-    to {opacity: 0;}
 }
 /* ======================================================================================== */
 
@@ -446,16 +450,12 @@ main {
     font-size: 100px;
     top: 275px;
     left: 130px;
-
+    
     animation: pop-up;
     animation-delay: 10s;
     animation-fill-mode: forwards;
 }
 
-@keyframes pop-up {
-    from {visibility: hidden;}
-    to{visibility: visible;}
-}
 
 /* ======================================================================================== */
 
@@ -471,9 +471,9 @@ main {
 }
 
 /*  Week 5: HTML5, DOM, JavaScript
-    Exercise: Multi-Page Forms
+Exercise: Multi-Page Forms
     url: https://moodle.unitec.ac.nz/mod/folder/view.php?id=1088851 */
-
+    
 .container-half {
     padding: 8px;
     width: 48%;
