@@ -52,7 +52,7 @@ function showPage(pageNumber) {
 }
 
 function adReplay() {
-    let ad = document.getElementById("adWrapper");
+    let ad = document.querySelector(".sideWrapper");
     let copy = ad.cloneNode(true);
     ad.replaceWith(copy);
 }

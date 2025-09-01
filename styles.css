@@ -212,7 +212,6 @@ main {
 /* ======================================================================================== */
 
 .sideWrapper {
-    z-index: 0;
     position: relative;
     display: flex;
     background-color: rgba(66,108,169,255);
@@ -225,97 +224,83 @@ main {
 
 /* ======================================================================================== */
 
+.sideScene1, .sideScene2, .sideScene3 {
+    position: absolute;
+    inset: 0;
+    display: flex;
+
+    animation: fade-out;
+    animation-fill-mode: forwards;
+}
+
 .sideScene1 {
     z-index: 3;
-    animation: fade-out;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
 }
 .sideScene2 {
     z-index: 2;
-    animation: fade-out;
     animation-delay: 5s;
-    animation-fill-mode: forwards;
 }
 .sideScene3 {
     z-index: 1;
+    animation-delay: 11s;
 }
 
-.sideScene1 {
-    display: flex;
-    height: 680px;
-    margin: 10px;
+
+.sideScene1-Background1, .sideScene1-Background2,
+.sideScene2-Background1, .sideScene2-Background2
+.sideScene3-Background1, .sideScene3-Background2, .sideScene3-Background3 {
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
 }
 
 .sideScene1-Background1 {
-
     /* Image: Photo by Jakub Żerdzicki on Unsplash https://unsplash.com/photos/a-camera-s
     itting-on-top-of-a-pile-of-white-objects-GpNaHFeN5bk?utm_content=creditShareLink&utm_m
     edium=referral&utm_source=unsplash */
-
     background-image: url('./assets/images/light-bulbs.jpg');
-    position: absolute;
-    inset: 0;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
 .sideScene1-Background2 {
     background-image: url('./assets/images/figure-1.png');
     background-size: 400px auto;
-    position: absolute;
-    inset: 0;
-    background-repeat: no-repeat;
     top: 350px;
+}
+
+.sideScene1-Line1, .sideScene1-Line2, .sideScene1-Line3, .sideScene1-Line4 {
+    text-shadow: 0px 2px black;
 }
 
 .sideScene1-Line1 {
     top: -50px;
-    text-shadow: 0px 1px black;
 }
-.sideScene1-Line2 {
-    text-shadow: 0px 1px black;
-}
+
 .sideScene1-Line3 {
     top: 50px;   
-    text-shadow: 0px 1px black;
 }
 .sideScene1-Line4 {
     top: 100px;
     color: yellow;
-    text-shadow: 0px 1px black;
 }
 
 /* ======================================================================================== */
 
-.sideScene2 {
-    display: flex;
-    height: 680px;
-    margin: 10px;
-}
-
 .sideScene2-Background1 {
-
     /* Image: Photo by Aleksandr Lyaptsev on Unsplash https://unsplash.com/photos/a-person
     s-hand-touching-a-button-on-a-wall-taNXaafOgAs?utm_content=creditShareLink&utm_medium=r
     eferral&utm_source=unsplash */
-
     background-image: url('./assets/images/switch.jpg');
-    position: absolute;
-    inset: 0;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
 .sideScene2-Background2 {
     background-image: url('./assets/images/figure-1.png');
-    position: absolute;
-    inset: 0;
-    background-size: 400px;
     background-position: center;
-    background-repeat: no-repeat;
+    background-size: 400px;
     bottom: -315px;
 }
 
@@ -341,21 +326,15 @@ main {
 
 .sideScene3-Background1 {
     background-image: url('./assets/images/figure-group.png');
-    position: absolute;
-    inset: 0;
-    background-repeat: no-repeat;
     background-size: 400px;
-    top: 250px;
+    top: 320px;
 }
 
 .sideScene3-Background2 {
     /* Image: By New Zealand Government (Te Kāwanatanga o Aotearoa) - New Zealand
     Government */
     background-image: url('./assets/images/nz-govt-logo.png');
-    position: absolute;
-    inset: 0;
     background-size: 190px;
-    background-repeat: no-repeat;
     top: 500px;
     left: 200px;
 }
@@ -363,21 +342,16 @@ main {
 .sideScene3-Background3 {
     /* Image: Logo of New Zealand's Electricity Authority - https://www.ea.govt.nz */
     background-image: url('./assets/images/te-mana-hiko-logo.png');
-    position: absolute;
-    inset: 0;
     background-size: 170px;
-    background-repeat: no-repeat;
     top: 515px;
     left: 20px;
 }
 
 .sideScene3-Line1 {
-    color: white;
     top: -50px;
 }
 
 .sideScene3-Line2 {
-    color: white;
     top: 0px;
 }
 
@@ -389,42 +363,38 @@ main {
     padding-right: 5px;
     border-radius: 10px;
     top: 100px;
-
-    animation: pop-up;
-    animation-duration: 9s;
 }
 
-.sideScene3-Line4 {
-    color: black;
+#studentName {
+    position: relative;
+    color:white;
     font-size: 14px;
     top: 560px;
-    left: 270px;
+    left: 250px;
 }
 
-#adReplay {
+#button-replay {
+    z-index: 4;
+    visibility: hidden;
     position: absolute;
     font-size: 100px;
     top: 275px;
-    left: 125px;
+    left: 130px;
 
-}
-
-#adScene3{
-    visibility: visible;
     animation: pop-up;
-    animation-duration: 11s;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes pop-up {
-    0% {
-        visibility: hidden;
-    }
-    99% {
-        visibility: hidden;
-    }
-    100% {
-        visibility: visible;
-    }
+    from {visibility: hidden;}
+    to{visibility: visible;}
+}
+
+@keyframes pop-down {
+    0%{opacity: 0;}
+    99%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 
