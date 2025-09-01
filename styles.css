@@ -12,58 +12,79 @@ body {
 }
 
 header {
+    background-color: black;
+    position: relative;
     width: 100%;
     height: 400px;
-    background-color: black;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
     overflow: hidden;
 }
+
 /* ======================================================================================== */
 
-@keyframes fade-in {
-    from {opacity: 0}
-    to {opacity: 100}
+.bannerWrapper {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: inherit;
 }
-@keyframes fade-out {
-    from {opacity: 100;}
-    to {opacity: 0;}
+
+#studentNameBanner {
+    opacity: 0;
+    position: absolute;
+    color: white;
+    font-family: "Oswald", sans-serif;;
+    font-size: 20px;
+    bottom: 0px;
+    z-index: 1;
+
+    animation:
+        fade-in 3s ease 10s forwards;
 }
 
 .bannerScene1, .bannerScene2, .bannerScene3 {
+    position: absolute;
+    inset: 0;
     opacity: 0;
     animation:
         fade-in 0.5s ease forwards,
         fade-out 0.5s ease forwards;
+    }
+    
+    .bannerScene1 {
+    z-index: 3;
+    animation-delay: 0s, 4.5s;
 }
-
-.bannerScene1 {
-    animation-delay: 0s, 4s;
-}
-
 .bannerScene2 {
-    animation-delay: 4s, 8.5s;
+    z-index: 2;
+    animation-delay: 4.5s, 9s;
 }
-
 .bannerScene3 {
-    animation-delay: 8.5s, 13s;
+    z-index: 1;
+    animation-delay: 9s, 13.5s;
 }
 
 .set-bg{
     position: absolute;
     inset: 0;
+    display: flex;
     background-repeat: no-repeat;
 }
 
 .bannerScene1-Background {
-    /* Image: Photo by BehindTheTmuna on Unsplash https://unsplash.com/photos/a-wooden-c
+    /* Original image: Photo by BehindTheTmuna on Unsplash https://unsplash.com/photos/a-wooden-c
     arving-of-a-face-with-green-eyes-Q3yrtL-qJhM?utm_content=creditShareLink&utm_medium=r
     eferral&utm_source=unsplash */
-    background-image: url('./assets/images/maori-carving.jpg');
+    /* Removed image background on: https://www.photoroom.com/tools/background-remover? */
+    background-image: url('./assets/images/maori-carving.png');
     background-size: 780px auto;
     background-position-y: -300px;
     background-position-x: right;
+    z-index: 2;
+    
+    animation:
+        slide-left 5s ease forwards;
 }
 
 .font-Oswald {
@@ -71,9 +92,9 @@ header {
 }
 
 .bannerFont {
+    position: absolute;
     font-family: "Oswald", sans-serif;
     color: white;
-    position: absolute;
     overflow: hidden;
     white-space: nowrap;
     margin-left: 150px;
@@ -85,6 +106,9 @@ header {
     font-size: 50px;
     top: 35px;
     left: 10px;
+    
+    animation:
+        fade-out 3s ease 0.5s forwards;
 }
 
 .bannerScene1-Line2 {
@@ -93,6 +117,12 @@ header {
     font-weight: 900;
     top: 25px;
     left: 10px;
+    z-index: 1;
+    
+    animation:
+        slide-right     10s ease 0.4 forwards,
+        scale-up        10s ease 0.4 forwards,
+        white-to-gold   5s ease 0.4 forwards;
 }
 
 .bannerScene1-Line3 {
@@ -100,6 +130,9 @@ header {
     top: 250px;
     font-size: 35px;
     left: 270px;
+    
+    animation:
+        slide-right 10s ease 0.4 forwards;
 }
 
 /* ======================================================================================== */
@@ -110,40 +143,41 @@ header {
     &utm_medium=referral&utm_source=unsplash */
     background-image: url('./assets/images/canoe.jpg');
     background-position-x: center;
-    background-size: 2200px;
+    background-size: 2100px;
     background-position-y: -400px;
+    
+    animation: 
+        slide-down 10s ease 4.5s forwards;
 }
 
 .bannerScene2-Line1 {
-    color: rgb(127, 56, 4);
-    font-size: 75px;
+    align-self: center;
+    opacity: 0;
+    font-size: 100px;
     font-weight: 500;
-    left: 300px;
-    top: -50px;
+    top: -90px;
 
-    transition-property: left;
-    transition-duration: 5s;
-    transition-timing-function: ease;
-    transition-delay: 0;
+    animation:
+        fade-in 1s ease 5s forwards,
+        white-to-gold 5s ease 5.5s forwards;
 }
-
-.bannerScene2-Line1:hover {
-    left: 800px
-}
-
 
 .bannerScene2-Line2 {
-    color: rgb(127, 56, 4);
+    opacity: 0;
     font-size: 35px;
     font-style: oblique;
     top: 95px;
-    left: 500px;
+    right: 500px;
+
+    animation: 
+        fade-in 1s ease 6s forwards;
 }
+
 
 /* ======================================================================================== */
 
-.bannerScene3 .bannerScene3-Background {
-
+.bannerScene3-Background {
+    
     /* Image: Photo by Connor Gan on Unsplash https://unsplash.com/photos/a-group-of-people-
     sitting-around-a-fire-pit-DLQD4RXVjAc?utm_content=creditShareLink&utm_medium=referral&ut
     m_source=unsplash */
@@ -151,39 +185,71 @@ header {
     background-position-x: center;
     background-size: 2100px auto;
     background-position-y: -1100px;
+
+    animation:
+        scale-up 10s ease 8.5s forwards;
 }
 
 .bannerScene3-Line1 {
+    opacity: 0;
     font-size: 75px;
     top: 0px;
     left: -75px;
+
+    animation:
+        fade-in 2s ease 9s forwards;
 }
 
 .bannerScene3-Line2 {
+    opacity: 0;
     font-family: "Boldonse", system-ui;
     font-size: 100px;
     font-weight: 500;
     top: 70px;
     left: -75px;
+
+    animation:
+        fade-in 2s ease 9.5s forwards,
+        white-to-gold 3s ease 9.5s forwards,
+        slide-right 10s ease-out 9s forwards;
 }
 
-.bannerScene3-Line3 {
-    text-align: right;
-    font-size: 18px;
-    right: 10px;
-
-    visibility: hidden;
+@keyframes white-to-gold {
+    from {color: white;}
+    to {color: rgb(243, 187, 44);}
 }
-
-.bannerScene3-Line4 {
-    text-align: right;
-    font-size: 18px;
-    right: 10px;
-    top: 30px;
-
-    visibility: hidden;
+@keyframes slide-right {
+    from {left: 0px;}
+    to {left: 70px;}
 }
-
+@keyframes slide-left {
+    from {right: 0px;}
+    to {right: 100px;}
+}
+@keyframes slide-up {
+    from {top: 0px;}
+    to {top: -100px;}
+}
+@keyframes slide-down {
+    from {top: 0px;}
+    to {top: 100px;}
+}
+@keyframes scale-up {
+    from {scale: 1;}
+    to {scale: 1.1;}
+}
+@keyframes scale-down {
+    from {scale: 1;}
+    to {scale: 1.1;}
+}
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 100}
+}
+@keyframes fade-out {
+    from {opacity: 100;}
+    to {opacity: 0;}
+}
 /* ======================================================================================== */
 
 main {
@@ -390,14 +456,6 @@ main {
     from {visibility: hidden;}
     to{visibility: visible;}
 }
-
-@keyframes pop-down {
-    0%{opacity: 0;}
-    99%{opacity: 0;}
-    100%{opacity: 1;}
-}
-
-
 
 /* ======================================================================================== */
 
