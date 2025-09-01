@@ -248,7 +248,7 @@ main {
 
 
 .sideScene1-Background1, .sideScene1-Background2,
-.sideScene2-Background1, .sideScene2-Background2
+.sideScene2-Background1, .sideScene2-Background2,
 .sideScene3-Background1, .sideScene3-Background2, .sideScene3-Background3 {
     position: absolute;
     inset: 0;
@@ -356,6 +356,7 @@ main {
 }
 
 .sideScene3-Line3 {
+    visibility: hidden;
     background-color: yellow;
     font-size: 40px;
     color: black;
@@ -363,14 +364,23 @@ main {
     padding-right: 5px;
     border-radius: 10px;
     top: 100px;
+
+    animation: pop-up;
+    animation-delay: 8.5s;
+    animation-fill-mode: forwards;
 }
 
 #studentName {
+    visibility: hidden;
     position: relative;
     color:white;
     font-size: 14px;
     top: 560px;
     left: 250px;
+
+    animation: pop-up;
+    animation-delay: 8.5s;
+    animation-fill-mode: forwards;
 }
 
 #button-replay {
