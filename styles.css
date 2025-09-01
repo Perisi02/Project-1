@@ -50,7 +50,7 @@ header {
     animation-delay: 8.5s, 13s;
 }
 
-.bannerWrapper .set-bg, .sideWrapper .set-bg{
+.set-bg{
     position: absolute;
     inset: 0;
     background-repeat: no-repeat;
@@ -64,6 +64,10 @@ header {
     background-size: 780px auto;
     background-position-y: -300px;
     background-position-x: right;
+}
+
+.font-Oswald {
+    font-family: "Oswald", sans-serif;
 }
 
 .bannerFont {
@@ -116,6 +120,15 @@ header {
     font-weight: 500;
     left: 300px;
     top: -50px;
+
+    transition-property: left;
+    transition-duration: 5s;
+    transition-timing-function: ease;
+    transition-delay: 0;
+}
+
+.bannerScene2-Line1:hover {
+    left: 800px
 }
 
 
