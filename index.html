@@ -40,7 +40,7 @@
     </header>
 
     <main>
-        <section class="formWrapper">
+        <section class="formWrapper" id="form">
             <div class="container-half card">
                 <subtitle class="card-title">Input Forms</subtitle>
                 <progress value="10" max="100"></progress>
@@ -55,11 +55,13 @@
                             <input
                                 type="date"
                                 id="date-picker"
+                                placeholder="_blank"
                             />
                         </label>
                         <label for="adults" class="row">
                             Adults
                             <input
+                                id="adults"
                                 type="number"
                                 placeholder="0"
                             />
@@ -67,6 +69,7 @@
                         <label for="children" class="row">
                             Children
                             <input
+                                id="children"
                                 type="number"
                                 placeholder="0"
                             />
@@ -87,6 +90,7 @@
                         <label for="contact-name" class="row">
                             Name
                             <input
+                                id="contact-name"
                                 type="text"
                                 placeholder="Contact name"
                             />
@@ -94,6 +98,7 @@
                         <label for="email-address" class="row">
                             Email
                             <input
+                                id="email-address"
                                 type="text"
                                 placeholder="Email address"
                             />
@@ -114,9 +119,9 @@
                         <h2>Tickets</h2>
                     </div>
                     <div> <!-- page input fields -->
-                        <label for="ticket-type" class="row">
-                            Ticket type
-                            <select name="tickets" id="ticket-type">
+                        <label for="ticket-type">
+                            Ticket type:
+                            <select id="ticket-type">
                                 <option value="">--Select ticket type--</option>
                                 <option value="standard">Standard</option>
                                 <option value="whakatere">Whakatere Pass</option>
@@ -132,6 +137,7 @@
                                     value="Yes, please add storage locker"
                                 /><span> Yes, please add storage locker,</span>
                             </label>
+
                             <label for="storage-no">
                                 <input
                                     type="radio"
@@ -169,7 +175,7 @@
                         <button class="previous" type="button" onclick="showPage(3)">
                             Previous
                         </button>
-                        <button class="next" type="button" onclick="showPage(5)">
+                        <button class="next" type="button" onclick="updateSummary(); showPage(5);">
                             Next
                         </button>
                     </div>
@@ -203,7 +209,7 @@
                         </div>
                     </div>
                     <div> <!-- page nav buttons -->
-                        <button class="next" type="button" onclick="showPage(1)">
+                        <button class="next" type="button" onclick="resetForm(); showPage(1);">
                             Close
                         </button>
                     </div>

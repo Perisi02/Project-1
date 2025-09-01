@@ -470,8 +470,12 @@ main {
     align-content: center;
 }
 
+input, .row {
+    font-size: 20px;
+}
+
 /*  Week 5: HTML5, DOM, JavaScript
-Exercise: Multi-Page Forms
+    Exercise: Multi-Page Forms
     url: https://moodle.unitec.ac.nz/mod/folder/view.php?id=1088851 */
     
 .container-half {
@@ -481,7 +485,7 @@ Exercise: Multi-Page Forms
     box-sizing: inherit;
     align-self: center;
     text-align: center;
-    min-height: 300px;
+    min-height: 500p;
     min-width: 600px;
 }
 
@@ -541,6 +545,7 @@ progress {
 }
 
 .form-page button {
+    font-size: 20px;
     padding: 4px 8px;
     margin: 8px;
     width: 25%;
